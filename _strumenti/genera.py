@@ -116,7 +116,7 @@ def pagina(rel, titolo, descrizione, corpo, imp, briciole=None, home=False):
     <div>
       <p><strong>Città di Castellanza</strong></p>
       <p>Viale Rimembranze 4, 21053 Castellanza (VA)</p>
-      <p>Ufficio Stampa e Comunicazione<br>ufficiostampa@comune.castellanza.va.it · tel. 0331 526241</p>
+      <p><a href="{COMUNE}amministrazione/uffici/">Contatti degli uffici comunali</a></p>
     </div>
   </div>
   <div class="link-piede">
@@ -269,7 +269,6 @@ def come_partecipare(imp):
 <p>Questo sito raccoglie le notizie delle associazioni attive a Castellanza. Ogni associazione ha una propria pagina con una breve presentazione, i contatti e l'archivio delle notizie pubblicate.</p>
 <p>Per segnalare una notizia o un appuntamento, l'associazione compila il modulo online. L'Ufficio Stampa e Comunicazione del Comune riceve la segnalazione, la verifica e cura la pubblicazione.</p>
 <p class="segnaposto">Qui andranno il collegamento al modulo e le regole di pubblicazione.</p>
-<p>Per informazioni: Ufficio Stampa e Comunicazione, ufficiostampa@comune.castellanza.va.it, tel. 0331 526241.</p>
 </div>
 </div>'''
     return pagina("", f"Come partecipare | {NOME_SITO}",
