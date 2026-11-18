@@ -41,7 +41,7 @@ h1,h2,h3{line-height:1.2;font-weight:700}
 .marchio:hover{color:#fff}
 .marchio img{width:44px}
 .marchio .ente{display:block;font-size:.875rem;font-weight:600;letter-spacing:.02em;opacity:.9}
-.marchio .nome-sito{display:block;font-size:clamp(1.35rem,3vw,1.85rem);font-weight:700;line-height:1.15}
+.marchio .nome-sito{display:block;margin:0;font-size:clamp(1.35rem,3vw,1.85rem);font-weight:700;line-height:1.15}
 .menu ul{list-style:none;margin:0;padding:0;display:flex;gap:1.5rem;flex-wrap:wrap}
 .menu a{color:#fff;text-decoration:none;font-weight:600}
 .menu a:hover{text-decoration:underline;color:#fff}
@@ -145,3 +145,24 @@ h1,h2,h3{line-height:1.2;font-weight:700}
 .ente-piede{display:flex;gap:1rem;align-items:flex-start}
 .ente-piede img{width:52px;flex:none}
 .nota-cookie{flex-basis:100%;margin-top:1.25rem!important;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.2);font-size:.8125rem;color:#D8C7CD}
+
+/* home: notizie */
+.apertura{padding:1.75rem 0 .5rem}
+.titolo-sezione{font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primario);margin:0 0 .5rem;padding-bottom:.6rem;border-bottom:3px solid var(--primario)}
+.notizie{padding:1.5rem 0 2.5rem}
+.lanci{list-style:none;margin:0;padding:0;max-width:50rem}
+.lancio{padding:1.25rem 0;border-bottom:1px solid var(--linea)}
+.fonte{margin:0;font-size:.9375rem;color:var(--grigio)}
+.fonte a{font-weight:700;text-decoration:none}
+.fonte a:hover{text-decoration:underline}
+.lancio h3{margin:.3rem 0 .35rem;font-size:clamp(1.25rem,2.6vw,1.5rem);line-height:1.25}
+.lancio h3 a{color:var(--testo);text-decoration:none}
+.lancio h3 a:hover{color:var(--primario);text-decoration:underline}
+.sommario-lancio{margin:0;color:var(--grigio)}
+/* home: indice delle associazioni */
+.indice-ass{padding:1rem 0 3rem}
+.boxes{list-style:none;margin:1rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,15.5rem),1fr));gap:.6rem}
+.box{display:flex;align-items:center;gap:.6rem;height:100%;padding:.55rem .75rem;background:var(--primario);color:#fff;text-decoration:none;border-radius:4px;font-size:.9375rem;font-weight:600;line-height:1.25}
+.box:hover{background:var(--scuro);color:#fff}
+.box .avatar.piccolo{width:2.1rem;height:2.1rem;font-size:.7rem;border:0}
+.box .avatar.piccolo.lunga{font-size:.58rem}

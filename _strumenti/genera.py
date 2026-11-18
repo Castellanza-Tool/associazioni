@@ -20,6 +20,7 @@ MESI = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio",
         "agosto", "settembre", "ottobre", "novembre", "dicembre"]
 SITO = "https://associazioni.comune.castellanza.va.it/"
 COMUNE = "https://www.comune.castellanza.va.it/"
+NOME_SITO = "Il Giornale delle Associazioni"
 
 e = html.escape
 
@@ -68,7 +69,7 @@ if (/\\.comune\\.castellanza\\.va\\.it$/.test(location.hostname)) {
 <!-- End Matomo Code -->"""
 
 
-def pagina(rel, titolo, descrizione, corpo, imp, briciole=None):
+def pagina(rel, titolo, descrizione, corpo, imp, briciole=None, home=False):
     bozza = ""
     if imp.get("prototipo"):
         bozza = ('<div class="avviso-prototipo" role="note"><strong>Prototipo per la valutazione interna.</strong> '
@@ -97,10 +98,11 @@ def pagina(rel, titolo, descrizione, corpo, imp, briciole=None):
 <header class="testata"><div class="contenitore">
   <a class="marchio" href="{rel}index.html">
     <img src="{rel}img/loghi/stemma-castellanza.png" alt="" width="44" height="62">
-    <span><span class="ente">Città di Castellanza</span><span class="nome-sito">Associazioni del territorio</span></span>
+    <div><span class="ente">Città di Castellanza</span>{"<h1 class=\"nome-sito\">" if home else "<span class=\"nome-sito\">"}{NOME_SITO}{"</h1>" if home else "</span>"}</div>
   </a>
   <nav class="menu" aria-label="Menu principale"><ul>
-    <li><a href="{rel}index.html">Le associazioni</a></li>
+    <li><a href="{rel}index.html#notizie">Le news</a></li>
+    <li><a href="{rel}index.html#associazioni">Le associazioni</a></li>
     <li><a href="{rel}come-partecipare.html">Come partecipare</a></li>
   </ul></nav>
 </div></header>
@@ -188,54 +190,38 @@ def scheda_contatti(a):
 # ---------------------------------------------------------------- pagine
 
 def home(imp, ass, per):
-    ambiti = sorted({a["ambito"] for a in ass})
-    filtri = ('<div class="filtri" role="group" aria-label="Filtra per ambito" hidden>'
-              '<button type="button" aria-pressed="true" data-ambito="">Tutte</button>'
-              + "".join(f'<button type="button" aria-pressed="false" data-ambito="{e(x)}">{e(x)}</button>' for x in ambiti)
-              + "</div>")
-    blocchi = []
-    for a in ass:
-        ult = per[a["slug"]][0] if per[a["slug"]] else None
-        info = (f'<span class="ultima">Ultima notizia: <time datetime="{ult["data"]}">{data_it(ult["data"])}</time></span>' if ult else "")
-        blocchi.append(f'''<li data-ambito="{e(a["ambito"])}" data-nome="{e(a["nome"].lower())}"><a class="blocco" href="{a["slug"]}/index.html">
-  {avatar(a, "")}
-  <span class="testo-blocco"><span class="ambito">{e(a["ambito"])}</span><span class="nome">{e(a["nome"])}</span>{info}</span>
-</a></li>''')
+    nome_di = {x["slug"]: x for x in ass}
+    tutte = sorted((n for lista in per.values() for n in lista), key=lambda n: n["data"], reverse=True)
+    voci = []
+    for n in tutte:
+        a = nome_di[n["associazione"]]
+        voci.append(f'''<li><article class="lancio">
+  <p class="fonte"><a href="{a["slug"]}/index.html">{e(a["nome"])}</a> · <time datetime="{n["data"]}">{data_it(n["data"])}</time></p>
+  <h3><a href="{a["slug"]}/{file_notizia(n)}">{e(n["titolo"])}</a></h3>
+  <p class="sommario-lancio">{e(n["sommario"])}</p>
+</article></li>''')
+    notizie = (f'<ol class="lanci">{"".join(voci)}</ol>' if voci else '<p class="vuoto">Non ci sono ancora notizie pubblicate.</p>')
+    blocchi = "".join(
+        f'<li><a class="box" href="{a["slug"]}/index.html">{avatar(a, "", "avatar piccolo")}<span>{e(a["nome"])}</span></a></li>'
+        for a in ass)
     corpo = f'''<section class="apertura"><div class="contenitore">
-  <h1>Associazioni del territorio</h1>
-  <p class="introduzione">Le associazioni che animano la vita di Castellanza raccontano qui le loro attività, gli appuntamenti e le iniziative aperte ai cittadini. Scegli un'associazione per conoscerla e leggere le sue notizie.</p>
+  <p class="introduzione">Le associazioni che animano la vita di Castellanza raccontano qui le loro attività, gli appuntamenti e le iniziative aperte ai cittadini.</p>
 </div></section>
-<section class="elenco" aria-labelledby="t-elenco"><div class="contenitore">
-  <h2 id="t-elenco" class="nascosto">Elenco delle associazioni</h2>
-  <div class="cerca" hidden><label for="cerca-ass">Cerca un'associazione</label><input id="cerca-ass" type="search" placeholder="Scrivi il nome" autocomplete="off"></div>
-  {filtri}
-  <p class="conteggio" aria-live="polite"></p>
-  <ul class="blocchi">
-{chr(10).join(blocchi)}
-  </ul>
+<section class="notizie" id="notizie" aria-labelledby="t-notizie"><div class="contenitore">
+  <h2 id="t-notizie" class="titolo-sezione">Tutte le news</h2>
+  {notizie}
+</div></section>
+<section class="indice-ass" id="associazioni" aria-labelledby="t-ass"><div class="contenitore">
+  <h2 id="t-ass" class="titolo-sezione">Le associazioni</h2>
+  <ul class="boxes">{blocchi}</ul>
 </div></section>
 <section class="invito"><div class="contenitore">
   <h2>Fai parte di un'associazione di Castellanza?</h2>
   <p>Puoi segnalare all'Ufficio Stampa e Comunicazione del Comune le notizie e gli appuntamenti da pubblicare su questo sito.</p>
   <p><a class="pulsante" href="come-partecipare.html">Scopri come partecipare</a></p>
-</div></section>
-<script>
-(function(){{
-  var box=document.querySelector('.filtri'), cerca=document.querySelector('.cerca'); if(!box) return;
-  var inp=document.getElementById('cerca-ass'), bott=box.querySelectorAll('button'), voci=document.querySelectorAll('.blocchi li'), cont=document.querySelector('.conteggio');
-  box.hidden=false; cerca.hidden=false; var amb='';
-  function mostra(){{
-    var q=inp.value.trim().toLowerCase(), n=0;
-    voci.forEach(function(li){{ var si=(!amb||li.dataset.ambito===amb)&&(!q||li.dataset.nome.indexOf(q)>-1); li.hidden=!si; if(si) n++; }});
-    bott.forEach(function(b){{ b.setAttribute('aria-pressed', String(b.dataset.ambito===amb)); }});
-    cont.textContent = (amb||q) ? (n===0 ? 'Nessuna associazione trovata' : n===1 ? '1 associazione' : n+' associazioni') : '';
-  }}
-  bott.forEach(function(b){{ b.addEventListener('click', function(){{ amb=b.dataset.ambito; mostra(); }}); }});
-  inp.addEventListener('input', mostra);
-}})();
-</script>'''
-    return pagina("", "Associazioni del territorio | Città di Castellanza",
-                  "Le notizie e gli appuntamenti delle associazioni di Castellanza.", corpo, imp)
+</div></section>'''
+    return pagina("", f"{NOME_SITO} | Città di Castellanza",
+                  "Le notizie e gli appuntamenti delle associazioni di Castellanza.", corpo, imp, home=True)
 
 
 def pagina_associazione(imp, a, lista):
@@ -257,8 +243,8 @@ def pagina_associazione(imp, a, lista):
   <div class="principale">{principale}{archivio}</div>
   {scheda_contatti(a)}
 </div>'''
-    return pagina(rel, f'{a["nome"]} | Associazioni del territorio, Castellanza', a["descrizione"], corpo, imp,
-                  [("Associazioni", rel + "index.html"), (a["nome"], None)])
+    return pagina(rel, f'{a["nome"]} | {NOME_SITO}', a["descrizione"], corpo, imp,
+                  [("Home", rel + "index.html"), (a["nome"], None)])
 
 
 def pagina_notizia(imp, a, n, lista):
@@ -272,8 +258,8 @@ def pagina_notizia(imp, a, n, lista):
   </div>
   {scheda_contatti(a)}
 </div>'''
-    return pagina(rel, f'{n["titolo"]} | {a["nome"]}', n["sommario"], corpo, imp,
-                  [("Associazioni", rel + "index.html"), (a["nome"], "index.html"), (n["titolo"], None)])
+    return pagina(rel, f'{n["titolo"]} | {NOME_SITO}', n["sommario"], corpo, imp,
+                  [("Home", rel + "index.html"), (a["nome"], "index.html"), (n["titolo"], None)])
 
 
 def come_partecipare(imp):
@@ -286,9 +272,9 @@ def come_partecipare(imp):
 <p>Per informazioni: Ufficio Stampa e Comunicazione, ufficiostampa@comune.castellanza.va.it, tel. 0331 526241.</p>
 </div>
 </div>'''
-    return pagina("", "Come partecipare | Associazioni del territorio, Castellanza",
+    return pagina("", f"Come partecipare | {NOME_SITO}",
                   "Come segnalare le notizie delle associazioni di Castellanza.", corpo, imp,
-                  [("Associazioni", "index.html"), ("Come partecipare", None)])
+                  [("Home", "index.html"), ("Come partecipare", None)])
 
 
 def main():
