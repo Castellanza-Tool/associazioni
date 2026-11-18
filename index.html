@@ -29,7 +29,7 @@ if (/\.comune\.castellanza\.va\.it$/.test(location.hostname)) {
 </head>
 <body>
 <a class="salta" href="#contenuto">Vai al contenuto</a>
-<div class="avviso-prototipo" role="note"><strong>Prototipo per la valutazione interna.</strong> Le associazioni e le notizie presenti sono di esempio.</div>
+<div class="avviso-prototipo" role="note"><strong>Prototipo per la valutazione interna.</strong> I dati delle associazioni vengono dal sito del Comune; le notizie dell'«Associazione di esempio» sono dimostrative.</div>
 <div class="fascia-ente"><div class="contenitore"><a href="https://www.comune.castellanza.va.it/">Città di Castellanza</a></div></div>
 <header class="testata"><div class="contenitore">
   <a class="marchio" href="index.html">
@@ -45,36 +45,173 @@ if (/\.comune\.castellanza\.va\.it$/.test(location.hostname)) {
 <div class="contenitore"></div>
 <section class="apertura"><div class="contenitore">
   <h1>Associazioni del territorio</h1>
-  <p class="introduzione">Le associazioni che animano la vita di Castellanza raccontano qui le loro attività, gli appuntamenti e le iniziative aperte ai cittadini. Scegli un'associazione per leggere le sue notizie.</p>
+  <p class="introduzione">Le associazioni che animano la vita di Castellanza raccontano qui le loro attività, gli appuntamenti e le iniziative aperte ai cittadini. Scegli un'associazione per conoscerla e leggere le sue notizie.</p>
 </div></section>
 <section class="elenco" aria-labelledby="t-elenco"><div class="contenitore">
   <h2 id="t-elenco" class="nascosto">Elenco delle associazioni</h2>
-  <div class="filtri" role="group" aria-label="Filtra per ambito" hidden><button type="button" aria-pressed="true" data-ambito="">Tutte</button><button type="button" aria-pressed="false" data-ambito="Ambiente">Ambiente</button><button type="button" aria-pressed="false" data-ambito="Cultura">Cultura</button><button type="button" aria-pressed="false" data-ambito="Musica">Musica</button><button type="button" aria-pressed="false" data-ambito="Sociale e volontariato">Sociale e volontariato</button><button type="button" aria-pressed="false" data-ambito="Sport">Sport</button><button type="button" aria-pressed="false" data-ambito="Tempo libero">Tempo libero</button></div>
+  <div class="cerca" hidden><label for="cerca-ass">Cerca un'associazione</label><input id="cerca-ass" type="search" placeholder="Scrivi il nome" autocomplete="off"></div>
+  <div class="filtri" role="group" aria-label="Filtra per ambito" hidden><button type="button" aria-pressed="true" data-ambito="">Tutte</button><button type="button" aria-pressed="false" data-ambito="Ambiente">Ambiente</button><button type="button" aria-pressed="false" data-ambito="Cultura">Cultura</button><button type="button" aria-pressed="false" data-ambito="Esempio">Esempio</button><button type="button" aria-pressed="false" data-ambito="Memoria e associazioni d&#x27;arma">Memoria e associazioni d&#x27;arma</button><button type="button" aria-pressed="false" data-ambito="Musica">Musica</button><button type="button" aria-pressed="false" data-ambito="Salute">Salute</button><button type="button" aria-pressed="false" data-ambito="Solidarietà e sociale">Solidarietà e sociale</button><button type="button" aria-pressed="false" data-ambito="Sport">Sport</button><button type="button" aria-pressed="false" data-ambito="Tempo libero">Tempo libero</button><button type="button" aria-pressed="false" data-ambito="Tradizioni e rioni">Tradizioni e rioni</button></div>
   <p class="conteggio" aria-live="polite"></p>
   <ul class="blocchi">
-<li data-ambito="Ambiente"><a class="blocco" href="associazione-ambientale-esempio/index.html">
-  <span class="avatar" aria-hidden="true">AA</span>
-  <span class="testo-blocco"><span class="ambito">Ambiente</span><span class="nome">Associazione ambientale di esempio</span><span class="ultima">Ultima notizia: <time datetime="2026-11-05">5 novembre 2026</time></span></span>
+<li data-ambito="Esempio" data-nome="associazione di esempio"><a class="blocco" href="associazione-di-esempio/index.html">
+  <span class="avatar" aria-hidden="true">ES</span>
+  <span class="testo-blocco"><span class="ambito">Esempio</span><span class="nome">Associazione di esempio</span><span class="ultima">Ultima notizia: <time datetime="2026-11-10">10 novembre 2026</time></span></span>
 </a></li>
-<li data-ambito="Cultura"><a class="blocco" href="associazione-culturale-esempio/index.html">
-  <span class="avatar" aria-hidden="true">AC</span>
-  <span class="testo-blocco"><span class="ambito">Cultura</span><span class="nome">Associazione culturale di esempio</span><span class="ultima">Ultima notizia: <time datetime="2026-11-16">16 novembre 2026</time></span></span>
+<li data-ambito="Memoria e associazioni d&#x27;arma" data-nome="a.n.a. associazione nazionale alpini"><a class="blocco" href="a-n-a-associazione-nazionale-alpini/index.html">
+  <span class="avatar" aria-hidden="true">ANA</span>
+  <span class="testo-blocco"><span class="ambito">Memoria e associazioni d&#x27;arma</span><span class="nome">A.N.A. Associazione Nazionale Alpini</span></span>
 </a></li>
-<li data-ambito="Sociale e volontariato"><a class="blocco" href="associazione-volontariato-esempio/index.html">
-  <span class="avatar" aria-hidden="true">AV</span>
-  <span class="testo-blocco"><span class="ambito">Sociale e volontariato</span><span class="nome">Associazione di volontariato di esempio</span><span class="ultima">Ultima notizia: <time datetime="2026-11-12">12 novembre 2026</time></span></span>
+<li data-ambito="Tempo libero" data-nome="amici del bonsai"><a class="blocco" href="amici-del-bonsai/index.html">
+  <span class="avatar" aria-hidden="true">AB</span>
+  <span class="testo-blocco"><span class="ambito">Tempo libero</span><span class="nome">Amici del Bonsai</span></span>
 </a></li>
-<li data-ambito="Musica"><a class="blocco" href="associazione-musicale-esempio/index.html">
+<li data-ambito="Ambiente" data-nome="amici del parco alto milanese"><a class="blocco" href="amici-del-parco-alto-milanese/index.html">
+  <span class="avatar" aria-hidden="true">APA</span>
+  <span class="testo-blocco"><span class="ambito">Ambiente</span><span class="nome">Amici del Parco Alto Milanese</span></span>
+</a></li>
+<li data-ambito="Solidarietà e sociale" data-nome="amici del progetto"><a class="blocco" href="amici-del-progetto/index.html">
+  <span class="avatar" aria-hidden="true">AP</span>
+  <span class="testo-blocco"><span class="ambito">Solidarietà e sociale</span><span class="nome">Amici del Progetto</span></span>
+</a></li>
+<li data-ambito="Cultura" data-nome="amici del teatro e dello sport"><a class="blocco" href="amici-del-teatro-e-dello-sport/index.html">
+  <span class="avatar" aria-hidden="true">ATD</span>
+  <span class="testo-blocco"><span class="ambito">Cultura</span><span class="nome">Amici del Teatro e dello Sport</span></span>
+</a></li>
+<li data-ambito="Cultura" data-nome="amsso"><a class="blocco" href="amsso/index.html">
   <span class="avatar" aria-hidden="true">AM</span>
-  <span class="testo-blocco"><span class="ambito">Musica</span><span class="nome">Associazione musicale di esempio</span><span class="ultima">Ultima notizia: <time datetime="2026-11-14">14 novembre 2026</time></span></span>
+  <span class="testo-blocco"><span class="ambito">Cultura</span><span class="nome">AMSSO</span></span>
 </a></li>
-<li data-ambito="Sport"><a class="blocco" href="associazione-sportiva-esempio/index.html">
-  <span class="avatar" aria-hidden="true">AS</span>
-  <span class="testo-blocco"><span class="ambito">Sport</span><span class="nome">Associazione sportiva di esempio</span><span class="ultima">Ultima notizia: <time datetime="2026-11-10">10 novembre 2026</time></span></span>
+<li data-ambito="Memoria e associazioni d&#x27;arma" data-nome="anpi - associazione nazionale partigiani italiani"><a class="blocco" href="anpi-associazione-nazionale-partigiani-italiani/index.html">
+  <span class="avatar lunga" aria-hidden="true">ANPI</span>
+  <span class="testo-blocco"><span class="ambito">Memoria e associazioni d&#x27;arma</span><span class="nome">ANPI - Associazione Nazionale Partigiani Italiani</span></span>
 </a></li>
-<li data-ambito="Tempo libero"><a class="blocco" href="circolo-ricreativo-esempio/index.html">
-  <span class="avatar" aria-hidden="true">CR</span>
-  <span class="testo-blocco"><span class="ambito">Tempo libero</span><span class="nome">Circolo ricreativo di esempio</span><span class="ultima">Nessuna notizia pubblicata</span></span>
+<li data-ambito="Cultura" data-nome="archivio fotografico italiano"><a class="blocco" href="archivio-fotografico-italiano/index.html">
+  <span class="avatar" aria-hidden="true">AFI</span>
+  <span class="testo-blocco"><span class="ambito">Cultura</span><span class="nome">Archivio Fotografico Italiano</span></span>
+</a></li>
+<li data-ambito="Sport" data-nome="asd g.s. cicloamatori castellanza"><a class="blocco" href="asd-g-s-cicloamatori-castellanza/index.html">
+  <span class="avatar" aria-hidden="true">GS</span>
+  <span class="testo-blocco"><span class="ambito">Sport</span><span class="nome">ASD G.S. Cicloamatori Castellanza</span></span>
+</a></li>
+<li data-ambito="Solidarietà e sociale" data-nome="associazione &quot;in cammino per la pace&quot; odv"><a class="blocco" href="associazione-in-cammino-per-la-pace-odv/index.html">
+  <span class="avatar" aria-hidden="true">CP</span>
+  <span class="testo-blocco"><span class="ambito">Solidarietà e sociale</span><span class="nome">Associazione &quot;In Cammino per la Pace&quot; ODV</span></span>
+</a></li>
+<li data-ambito="Salute" data-nome="associazione a.it.a. (associazione italiana afasici)"><a class="blocco" href="associazione-a-it-a-associazione-italiana-afasici/index.html">
+  <span class="avatar lunga" aria-hidden="true">AITA</span>
+  <span class="testo-blocco"><span class="ambito">Salute</span><span class="nome">Associazione A.IT.A. (Associazione Italiana Afasici)</span></span>
+</a></li>
+<li data-ambito="Tempo libero" data-nome="associazione culturale area giovani"><a class="blocco" href="associazione-culturale-area-giovani/index.html">
+  <span class="avatar" aria-hidden="true">AG</span>
+  <span class="testo-blocco"><span class="ambito">Tempo libero</span><span class="nome">Associazione Culturale Area Giovani</span></span>
+</a></li>
+<li data-ambito="Solidarietà e sociale" data-nome="associazione culturale il filo"><a class="blocco" href="associazione-culturale-il-filo/index.html">
+  <span class="avatar" aria-hidden="true">F</span>
+  <span class="testo-blocco"><span class="ambito">Solidarietà e sociale</span><span class="nome">Associazione culturale Il Filo</span></span>
+</a></li>
+<li data-ambito="Solidarietà e sociale" data-nome="associazione la nostra voce aps"><a class="blocco" href="associazione-la-nostra-voce-aps/index.html">
+  <span class="avatar" aria-hidden="true">NV</span>
+  <span class="testo-blocco"><span class="ambito">Solidarietà e sociale</span><span class="nome">Associazione La Nostra Voce APS</span></span>
+</a></li>
+<li data-ambito="Tempo libero" data-nome="associazione navimodellisti valle olona"><a class="blocco" href="associazione-navimodellisti-valle-olona/index.html">
+  <span class="avatar" aria-hidden="true">NVO</span>
+  <span class="testo-blocco"><span class="ambito">Tempo libero</span><span class="nome">Associazione Navimodellisti Valle Olona</span></span>
+</a></li>
+<li data-ambito="Memoria e associazioni d&#x27;arma" data-nome="associazione nazionale bersaglieri"><a class="blocco" href="associazione-nazionale-bersaglieri/index.html">
+  <span class="avatar" aria-hidden="true">ANB</span>
+  <span class="testo-blocco"><span class="ambito">Memoria e associazioni d&#x27;arma</span><span class="nome">Associazione Nazionale Bersaglieri</span></span>
+</a></li>
+<li data-ambito="Memoria e associazioni d&#x27;arma" data-nome="associazione nazionale carabinieri in congedo"><a class="blocco" href="associazione-nazionale-carabinieri-in-congedo/index.html">
+  <span class="avatar" aria-hidden="true">ANC</span>
+  <span class="testo-blocco"><span class="ambito">Memoria e associazioni d&#x27;arma</span><span class="nome">Associazione Nazionale Carabinieri in congedo</span></span>
+</a></li>
+<li data-ambito="Memoria e associazioni d&#x27;arma" data-nome="associazione nazionale famiglie dei caduti e dispersi in guerra"><a class="blocco" href="associazione-nazionale-famiglie-dei-caduti-e-dispersi-in-guerra/index.html">
+  <span class="avatar lunga" aria-hidden="true">ANFC</span>
+  <span class="testo-blocco"><span class="ambito">Memoria e associazioni d&#x27;arma</span><span class="nome">Associazione Nazionale famiglie dei caduti e dispersi in guerra</span></span>
+</a></li>
+<li data-ambito="Memoria e associazioni d&#x27;arma" data-nome="associazione nazionale marinai d&#x27;italia"><a class="blocco" href="associazione-nazionale-marinai-d-italia/index.html">
+  <span class="avatar lunga" aria-hidden="true">ANMI</span>
+  <span class="testo-blocco"><span class="ambito">Memoria e associazioni d&#x27;arma</span><span class="nome">Associazione Nazionale Marinai d&#x27;Italia</span></span>
+</a></li>
+<li data-ambito="Solidarietà e sociale" data-nome="associazione sos umanità"><a class="blocco" href="associazione-sos-umanita/index.html">
+  <span class="avatar" aria-hidden="true">SU</span>
+  <span class="testo-blocco"><span class="ambito">Solidarietà e sociale</span><span class="nome">Associazione SOS Umanità</span></span>
+</a></li>
+<li data-ambito="Solidarietà e sociale" data-nome="auser insieme"><a class="blocco" href="auser-insieme/index.html">
+  <span class="avatar" aria-hidden="true">AI</span>
+  <span class="testo-blocco"><span class="ambito">Solidarietà e sociale</span><span class="nome">AUSER Insieme</span></span>
+</a></li>
+<li data-ambito="Salute" data-nome="avis"><a class="blocco" href="avis/index.html">
+  <span class="avatar lunga" aria-hidden="true">AVIS</span>
+  <span class="testo-blocco"><span class="ambito">Salute</span><span class="nome">AVIS</span></span>
+</a></li>
+<li data-ambito="Solidarietà e sociale" data-nome="centro di aiuto alla vita"><a class="blocco" href="centro-di-aiuto-alla-vita/index.html">
+  <span class="avatar" aria-hidden="true">CAA</span>
+  <span class="testo-blocco"><span class="ambito">Solidarietà e sociale</span><span class="nome">Centro di Aiuto alla Vita</span></span>
+</a></li>
+<li data-ambito="Sport" data-nome="club alpino italiano (cai)"><a class="blocco" href="club-alpino-italiano-cai/index.html">
+  <span class="avatar" aria-hidden="true">CAI</span>
+  <span class="testo-blocco"><span class="ambito">Sport</span><span class="nome">Club Alpino Italiano (CAI)</span></span>
+</a></li>
+<li data-ambito="Cultura" data-nome="compagnia filodrammatica entrata di sicurezza"><a class="blocco" href="compagnia-filodrammatica-entrata-di-sicurezza/index.html">
+  <span class="avatar" aria-hidden="true">CFE</span>
+  <span class="testo-blocco"><span class="ambito">Cultura</span><span class="nome">Compagnia filodrammatica Entrata di Sicurezza</span></span>
+</a></li>
+<li data-ambito="Musica" data-nome="coro donna lombarda"><a class="blocco" href="coro-donna-lombarda/index.html">
+  <span class="avatar" aria-hidden="true">CDL</span>
+  <span class="testo-blocco"><span class="ambito">Musica</span><span class="nome">Coro Donna Lombarda</span></span>
+</a></li>
+<li data-ambito="Musica" data-nome="corpo musicale santa cecilia"><a class="blocco" href="corpo-musicale-santa-cecilia/index.html">
+  <span class="avatar" aria-hidden="true">CMS</span>
+  <span class="testo-blocco"><span class="ambito">Musica</span><span class="nome">Corpo Musicale Santa Cecilia</span></span>
+</a></li>
+<li data-ambito="Musica" data-nome="gospel for joy"><a class="blocco" href="gospel-for-joy/index.html">
+  <span class="avatar" aria-hidden="true">GFJ</span>
+  <span class="testo-blocco"><span class="ambito">Musica</span><span class="nome">Gospel for joy</span></span>
+</a></li>
+<li data-ambito="Tempo libero" data-nome="gruppo giovani castellanzesi"><a class="blocco" href="gruppo-giovani-castellanzesi/index.html">
+  <span class="avatar" aria-hidden="true">GGC</span>
+  <span class="testo-blocco"><span class="ambito">Tempo libero</span><span class="nome">Gruppo Giovani Castellanzesi</span></span>
+</a></li>
+<li data-ambito="Cultura" data-nome="il prisma"><a class="blocco" href="il-prisma/index.html">
+  <span class="avatar" aria-hidden="true">P</span>
+  <span class="testo-blocco"><span class="ambito">Cultura</span><span class="nome">Il Prisma</span></span>
+</a></li>
+<li data-ambito="Solidarietà e sociale" data-nome="la mensa del padre nostro"><a class="blocco" href="la-mensa-del-padre-nostro/index.html">
+  <span class="avatar" aria-hidden="true">MPN</span>
+  <span class="testo-blocco"><span class="ambito">Solidarietà e sociale</span><span class="nome">La mensa del Padre Nostro</span></span>
+</a></li>
+<li data-ambito="Salute" data-nome="lega italiana lotta tumori (lilt)"><a class="blocco" href="lega-italiana-lotta-tumori-lilt/index.html">
+  <span class="avatar lunga" aria-hidden="true">LILT</span>
+  <span class="testo-blocco"><span class="ambito">Salute</span><span class="nome">Lega Italiana Lotta Tumori (LILT)</span></span>
+</a></li>
+<li data-ambito="Tradizioni e rioni" data-nome="pro loco"><a class="blocco" href="pro-loco/index.html">
+  <span class="avatar" aria-hidden="true">PL</span>
+  <span class="testo-blocco"><span class="ambito">Tradizioni e rioni</span><span class="nome">Pro Loco</span></span>
+</a></li>
+<li data-ambito="Tradizioni e rioni" data-nome="rione in giò"><a class="blocco" href="rione-in-gio/index.html">
+  <span class="avatar" aria-hidden="true">RG</span>
+  <span class="testo-blocco"><span class="ambito">Tradizioni e rioni</span><span class="nome">Rione in Giò</span></span>
+</a></li>
+<li data-ambito="Tradizioni e rioni" data-nome="rione insù"><a class="blocco" href="rione-insu/index.html">
+  <span class="avatar" aria-hidden="true">RI</span>
+  <span class="testo-blocco"><span class="ambito">Tradizioni e rioni</span><span class="nome">Rione Insù</span></span>
+</a></li>
+<li data-ambito="Solidarietà e sociale" data-nome="solidarietà famigliare"><a class="blocco" href="solidarieta-famigliare/index.html">
+  <span class="avatar" aria-hidden="true">SF</span>
+  <span class="testo-blocco"><span class="ambito">Solidarietà e sociale</span><span class="nome">Solidarietà Famigliare</span></span>
+</a></li>
+<li data-ambito="Solidarietà e sociale" data-nome="the house of sarah and abraham (casa ibe)"><a class="blocco" href="the-house-of-sarah-and-abraham-casa-ibe/index.html">
+  <span class="avatar" aria-hidden="true">IBE</span>
+  <span class="testo-blocco"><span class="ambito">Solidarietà e sociale</span><span class="nome">The House of Sarah and Abraham (Casa IBE)</span></span>
+</a></li>
+<li data-ambito="Salute" data-nome="un...due...tre... alessio onlus"><a class="blocco" href="un-due-tre-alessio-onlus/index.html">
+  <span class="avatar" aria-hidden="true">UA</span>
+  <span class="testo-blocco"><span class="ambito">Salute</span><span class="nome">Un...due...tre... Alessio Onlus</span></span>
+</a></li>
+<li data-ambito="Cultura" data-nome="universiter"><a class="blocco" href="universiter/index.html">
+  <span class="avatar" aria-hidden="true">U</span>
+  <span class="testo-blocco"><span class="ambito">Cultura</span><span class="nome">Universiter</span></span>
 </a></li>
   </ul>
 </div></section>
@@ -85,16 +222,17 @@ if (/\.comune\.castellanza\.va\.it$/.test(location.hostname)) {
 </div></section>
 <script>
 (function(){
-  var box=document.querySelector('.filtri'); if(!box) return;
-  var bott=box.querySelectorAll('button'), voci=document.querySelectorAll('.blocchi li'), cont=document.querySelector('.conteggio');
-  box.hidden=false;
-  function mostra(amb){
-    var n=0;
-    voci.forEach(function(li){ var si=!amb||li.dataset.ambito===amb; li.hidden=!si; if(si) n++; });
+  var box=document.querySelector('.filtri'), cerca=document.querySelector('.cerca'); if(!box) return;
+  var inp=document.getElementById('cerca-ass'), bott=box.querySelectorAll('button'), voci=document.querySelectorAll('.blocchi li'), cont=document.querySelector('.conteggio');
+  box.hidden=false; cerca.hidden=false; var amb='';
+  function mostra(){
+    var q=inp.value.trim().toLowerCase(), n=0;
+    voci.forEach(function(li){ var si=(!amb||li.dataset.ambito===amb)&&(!q||li.dataset.nome.indexOf(q)>-1); li.hidden=!si; if(si) n++; });
     bott.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.ambito===amb)); });
-    cont.textContent = amb ? (n===1 ? '1 associazione' : n+' associazioni')+' in "'+amb+'"' : '';
+    cont.textContent = (amb||q) ? (n===0 ? 'Nessuna associazione trovata' : n===1 ? '1 associazione' : n+' associazioni') : '';
   }
-  bott.forEach(function(b){ b.addEventListener('click', function(){ mostra(b.dataset.ambito); }); });
+  bott.forEach(function(b){ b.addEventListener('click', function(){ amb=b.dataset.ambito; mostra(); }); });
+  inp.addEventListener('input', mostra);
 })();
 </script>
 </main>

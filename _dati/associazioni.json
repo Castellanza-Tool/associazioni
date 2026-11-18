@@ -1,50 +1,522 @@
 [
   {
-    "slug": "associazione-sportiva-esempio",
-    "nome": "Associazione sportiva di esempio",
-    "sigla": "AS",
+    "slug": "la-mensa-del-padre-nostro",
+    "nome": "La mensa del Padre Nostro",
+    "sigla": "MPN",
+    "ambito": "Solidarietà e sociale",
+    "descrizione": "Prestare aiuti alimentari alle persone che vivono in condizioni disagiate e di povertà.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/La-mensa-del-Padre-Nostro/",
+    "contatti": {
+      "sede": "Via Vittorio Veneto 4/B - Castellanza",
+      "email": "mensadelpadrenostro@libero.it",
+      "telefono": "3510124334"
+    }
+  },
+  {
+    "slug": "asd-g-s-cicloamatori-castellanza",
+    "nome": "ASD G.S. Cicloamatori Castellanza",
+    "sigla": "GS",
     "ambito": "Sport",
-    "descrizione": "Promuove l'attività sportiva per ragazzi e adulti, con corsi durante tutto l'anno e iniziative aperte alle famiglie.",
-    "contatti": {"referente": "Nome del referente", "email": "info@esempio.it", "telefono": "0331 000000", "sito": "", "facebook": "", "instagram": ""}
+    "descrizione": "Gruppo sportivo dilettantistico nato per promuovere la passione per il ciclismo amatoriale e ricreativo.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/ASD-G.S.-Cicloamatori-Castellanza/",
+    "contatti": {
+      "sede": "Piazza Soldini 8 - Castellanza",
+      "email": "cicloamatoricastellanza@gmail.com",
+      "telefono": "3355953304"
+    }
   },
   {
-    "slug": "associazione-culturale-esempio",
-    "nome": "Associazione culturale di esempio",
-    "sigla": "AC",
+    "slug": "associazione-la-nostra-voce-aps",
+    "nome": "Associazione La Nostra Voce APS",
+    "sigla": "NV",
+    "ambito": "Solidarietà e sociale",
+    "descrizione": "Attività di assistenza sociale, ricreativa, con particolare attenzione alle persone in difficoltà.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Associazione-La-Nostra-Voce-APS/",
+    "contatti": {
+      "sede": "Piazza Soldini 8 - Castellanza",
+      "email": "cicolamatoricastellanza@gmail.com",
+      "telefono": "3491764501"
+    }
+  },
+  {
+    "slug": "associazione-in-cammino-per-la-pace-odv",
+    "nome": "Associazione \"In Cammino per la Pace\" ODV",
+    "sigla": "CP",
+    "ambito": "Solidarietà e sociale",
+    "descrizione": "L'associazione nasce con finalità civiche, solidaristiche e di utilità sociale, svolgendo prevalentemente in favore di terzi attività di interesse generale. Promuove le iniziative del \"Tavolo in cammino per la pace\" istituito nel 2024.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Associazione-In-Cammino-per-la-Pace-ODV/",
+    "contatti": {
+      "sede": "Via Don G. Tovo 17 - Olgiate Olona",
+      "email": "incamminoperlapace23@gmail.com",
+      "telefono": "+39 3396672005"
+    }
+  },
+  {
+    "slug": "associazione-culturale-il-filo",
+    "nome": "Associazione culturale Il Filo",
+    "sigla": "F",
+    "ambito": "Solidarietà e sociale",
+    "descrizione": "Offre sul territorio un servizio di cura e accudimento dei più piccoli, tramite il nido famiglia Calzini Spaiati, e momenti di aggregazione e ritrovo per i genitori.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Associazione-culturale-Il-Filo/",
+    "contatti": {
+      "sede": "Via Carducci 4 - Castellanza",
+      "email": "info.associazioneilfilo@gmail.com",
+      "telefono": "3271212276"
+    }
+  },
+  {
+    "slug": "amici-del-teatro-e-dello-sport",
+    "nome": "Amici del Teatro e dello Sport",
+    "sigla": "ATD",
     "ambito": "Cultura",
-    "descrizione": "Organizza incontri con gli autori, mostre e serate dedicate alla storia e alla cultura del territorio.",
-    "contatti": {"referente": "Nome del referente", "email": "info@esempio.it", "telefono": "0331 000000", "sito": "", "facebook": "", "instagram": ""}
+    "descrizione": "Organizzare e divulgare spettacoli teatrali, cinematografici e sportivi; organizzare convegni su temi teatrali e sportivi; avvicinare i giovani al teatro e allo sport, come parte attiva e come spettatori.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Amici-del-Teatro-e-dello-Sport/",
+    "contatti": {
+      "sede": "c/o Teatro di via Dante - via Dante 5 - Castellanza",
+      "email": "cineteatrodante00@gmail.com",
+      "telefono": "0331 480626"
+    }
   },
   {
-    "slug": "associazione-volontariato-esempio",
-    "nome": "Associazione di volontariato di esempio",
-    "sigla": "AV",
-    "ambito": "Sociale e volontariato",
-    "descrizione": "Offre accompagnamento e piccoli servizi alle persone anziane e alle famiglie in difficoltà, grazie all'impegno dei volontari.",
-    "contatti": {"referente": "Nome del referente", "email": "info@esempio.it", "telefono": "0331 000000", "sito": "", "facebook": "", "instagram": ""}
+    "slug": "un-due-tre-alessio-onlus",
+    "nome": "Un...due...tre... Alessio Onlus",
+    "sigla": "UA",
+    "ambito": "Salute",
+    "descrizione": "Sostenere economicamente le famiglie che si devono trasferire per le cure oncoematologiche all'ospedale Bambino Gesù e sensibilizzare l'opinione pubblica.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Un...due...tre...-Alessio-Onlus/",
+    "contatti": {
+      "sede": "Via don Minzoni 2 - Castellanza",
+      "email": "unduetrealessio@gmail.com",
+      "telefono": "3922130875"
+    }
   },
   {
-    "slug": "associazione-ambientale-esempio",
-    "nome": "Associazione ambientale di esempio",
-    "sigla": "AA",
-    "ambito": "Ambiente",
-    "descrizione": "Si occupa della cura del verde e della sensibilizzazione sui temi ambientali, con giornate di lavoro aperte ai cittadini.",
-    "contatti": {"referente": "Nome del referente", "email": "info@esempio.it", "telefono": "0331 000000", "sito": "", "facebook": "", "instagram": ""}
+    "slug": "solidarieta-famigliare",
+    "nome": "Solidarietà Famigliare",
+    "sigla": "SF",
+    "ambito": "Solidarietà e sociale",
+    "descrizione": "Attenzione alle problematiche delle persone disabili e delle loro famiglie; offrire opportunità di crescita, di integrazione sociale, di riabilitazione.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/SOLIDARIETA-FAMIGLIARE/",
+    "contatti": {
+      "sede": "Via per Legnano 1 - Castellanza",
+      "email": "solidarietafamigliare@tin.it",
+      "telefono": "0331 545958"
+    }
   },
   {
-    "slug": "associazione-musicale-esempio",
-    "nome": "Associazione musicale di esempio",
+    "slug": "lega-italiana-lotta-tumori-lilt",
+    "nome": "Lega Italiana Lotta Tumori (LILT)",
+    "sigla": "LILT",
+    "ambito": "Salute",
+    "descrizione": "Opera senza fini di lucro e ha come compito istituzionale principale la promozione della prevenzione oncologica, insieme alle connesse attività di natura socio-sanitaria e riabilitativa.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Lega-Italiana-Lotta-Tumori-LILT/",
+    "contatti": {
+      "sede": "Piazza Plebiscito 1 - Busto Arsizio",
+      "email": "segreteria@legatumorivarese.it",
+      "telefono": "0331 623002"
+    }
+  },
+  {
+    "slug": "centro-di-aiuto-alla-vita",
+    "nome": "Centro di Aiuto alla Vita",
+    "sigla": "CAA",
+    "ambito": "Solidarietà e sociale",
+    "descrizione": "Assistenza e promozione della vita dal concepimento.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Centro-di-Aiuto-alla-Vita/",
+    "contatti": {
+      "sede": "Via Vittorio Veneto 4 - Castellanza",
+      "email": "cav.castellanza@virgilio.it",
+      "telefono": "0331 501492"
+    }
+  },
+  {
+    "slug": "avis",
+    "nome": "AVIS",
+    "sigla": "AVIS",
+    "ambito": "Salute",
+    "descrizione": "Perseguire senza alcuno scopo di lucro il fine di interesse pubblico di garantire un'adeguata disponibilità di sangue e dei suoi emocomponenti a tutti coloro che ne abbiano necessità.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/AVIS/",
+    "contatti": {
+      "sede": "c/o Sig.ra Riganti Donata - Via Damiano Chiesa 3 - Castellanza",
+      "email": "donata.riganti@libero.it",
+      "telefono": "3487720681"
+    }
+  },
+  {
+    "slug": "auser-insieme",
+    "nome": "AUSER Insieme",
+    "sigla": "AI",
+    "ambito": "Solidarietà e sociale",
+    "descrizione": "Solidarietà e aiuto alle persone bisognose di accompagnamento a visite mediche e ospedaliere, aggregazione sociale, serate di intrattenimento.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/AUSER-Insieme/",
+    "contatti": {
+      "sede": "Via Montello 18 - Castellanza",
+      "email": "auserfilodar.castellanza@alice.it",
+      "telefono": "0331 481344"
+    }
+  },
+  {
+    "slug": "associazione-sos-umanita",
+    "nome": "Associazione SOS Umanità",
+    "sigla": "SU",
+    "ambito": "Solidarietà e sociale",
+    "descrizione": "Aiutare l'integrazione di persone in difficoltà economiche, di disabili, di extracomunitari, raccogliendo fondi con attività sportive, mercatini, donazioni, progetti propri o finanziando progetti di altre associazioni.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Associazione-SOS-Umanita/",
+    "contatti": {
+      "sede": "Via A. Costa 18 - Castellanza",
+      "email": "sosumanita@gmail.com",
+      "telefono": "3921688963"
+    }
+  },
+  {
+    "slug": "associazione-a-it-a-associazione-italiana-afasici",
+    "nome": "Associazione A.IT.A. (Associazione Italiana Afasici)",
+    "sigla": "AITA",
+    "ambito": "Salute",
+    "descrizione": "Aiutare le persone afasiche (cioè con disturbo del linguaggio) e i loro familiari a capire e a vivere l'afasia, organizzando incontri e attività per la promozione della salute e la sensibilizzazione dell'opinione pubblica.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Associazione-A.IT.A.-Associazione-Italiana-Afasici/",
+    "contatti": {
+      "sede": "Sede operativa: Via Piemonte 70 - Castellanza",
+      "email": "info.aitacastellanza@gmail.com",
+      "telefono": "3805102249"
+    }
+  },
+  {
+    "slug": "amsso",
+    "nome": "AMSSO",
     "sigla": "AM",
-    "ambito": "Musica",
-    "descrizione": "Riunisce musicisti di ogni età, tiene corsi di strumento e accompagna con i suoi concerti le ricorrenze della città.",
-    "contatti": {"referente": "Nome del referente", "email": "info@esempio.it", "telefono": "0331 000000", "sito": "", "facebook": "", "instagram": ""}
+    "ambito": "Cultura",
+    "descrizione": "Contribuire a diffondere i principi di libertà formale e sostanziale di scelta e accesso negli istituti Figlie di Maria Ausiliatrice; promuovere educazione e formazione dei valori cristiani, con particolare attenzione al carisma educativo salesiano.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/AMSSO/",
+    "contatti": {
+      "sede": "c/o Istituto Maria Ausiliatrice - via card. Ferrari 7 - Castellanza",
+      "email": "lino_panno2002@yahoo.it",
+      "telefono": "0331 50681"
+    }
   },
   {
-    "slug": "circolo-ricreativo-esempio",
-    "nome": "Circolo ricreativo di esempio",
-    "sigla": "CR",
+    "slug": "amici-del-progetto",
+    "nome": "Amici del Progetto",
+    "sigla": "AP",
+    "ambito": "Solidarietà e sociale",
+    "descrizione": "Solidarietà sociale nei confronti della casa di accoglienza gestita dalla cooperativa Il Progetto.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Amici-del-Progetto/",
+    "contatti": {
+      "sede": "Via S. D'Acquisto 25 - Castellanza",
+      "email": "amicidelprogetto@virgilio.it",
+      "telefono": "0331 504770"
+    }
+  },
+  {
+    "slug": "rione-insu",
+    "nome": "Rione Insù",
+    "sigla": "RI",
+    "ambito": "Tradizioni e rioni",
+    "descrizione": "Promuovere manifestazioni per mantenere vive le tradizioni del Rione Insù di Castellanza mediante attività culturali, folkloristiche, sportive e ricreative di carattere sociale.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Rione-Insu/",
+    "contatti": {
+      "sede": "Via Roma 17 - Castellanza",
+      "email": "rioneinsu.castellanza@pec.buffetti.it",
+      "telefono": "34924251148"
+    }
+  },
+  {
+    "slug": "rione-in-gio",
+    "nome": "Rione in Giò",
+    "sigla": "RG",
+    "ambito": "Tradizioni e rioni",
+    "descrizione": "Mantenimento delle tradizioni rionali legate a manifestazioni culturali, sportive e del tempo libero, ricreative e informative utili ai cittadini del rione.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Rione-in-Gio/",
+    "contatti": {
+      "sede": "Viale Lombardia 39 - Castellanza",
+      "email": "tiziano.tosello@fastwebnet.it",
+      "telefono": "3333162447"
+    }
+  },
+  {
+    "slug": "club-alpino-italiano-cai",
+    "nome": "Club Alpino Italiano (CAI)",
+    "sigla": "CAI",
+    "ambito": "Sport",
+    "descrizione": "Promuovere l'attività alpinistica, escursionistica, il rispetto dell'ambiente e la conoscenza delle montagne, specialmente di quelle italiane.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Club-Alpino-Italiano-CAI/",
+    "contatti": {
+      "sede": "Via Don Bosco 2 - Castellanza",
+      "email": "info@caicastellanza.it",
+      "telefono": "3421960056"
+    }
+  },
+  {
+    "slug": "associazione-nazionale-famiglie-dei-caduti-e-dispersi-in-guerra",
+    "nome": "Associazione Nazionale famiglie dei caduti e dispersi in guerra",
+    "sigla": "ANFC",
+    "ambito": "Memoria e associazioni d'arma",
+    "descrizione": "Organizzare e partecipare alle giornate commemorative dei caduti e dispersi in guerra nella Provincia di Varese e nell'Alto Milanese.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Associazione-Nazionale-famiglie-dei-caduti-e-dispersi-in-guerra/",
+    "contatti": {
+      "sede": "Sede operativa: Via Donizetti 127 - Marnate",
+      "email": "fanagut@libero.it",
+      "telefono": "3466056780"
+    }
+  },
+  {
+    "slug": "associazione-nazionale-marinai-d-italia",
+    "nome": "Associazione Nazionale Marinai d'Italia",
+    "sigla": "ANMI",
+    "ambito": "Memoria e associazioni d'arma",
+    "descrizione": "",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Associazione-Nazionale-Marinai-dItalia/",
+    "contatti": {
+      "sede": "Via Bernocchi 10 - Castellanza - c/o Torrione",
+      "email": "anmi.castellanza@libero.it",
+      "telefono": "3287226921"
+    }
+  },
+  {
+    "slug": "associazione-nazionale-carabinieri-in-congedo",
+    "nome": "Associazione Nazionale Carabinieri in congedo",
+    "sigla": "ANC",
+    "ambito": "Memoria e associazioni d'arma",
+    "descrizione": "Promuovere e cementare i vincoli di cameratismo e solidarietà tra i militari in congedo e quelli in servizio dell'Arma; tener vivo tra i soci il sentimento di devozione alla Patria; realizzare l'assistenza morale, culturale, ricreativa ed economica a favore degli iscritti e delle loro famiglie.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Associazione-Nazionale-Carabinieri-in-congedo/",
+    "contatti": {
+      "sede": "Via Bernocchi 10 - Castellanza - c/o Torrione",
+      "email": "",
+      "telefono": "3296018386"
+    }
+  },
+  {
+    "slug": "associazione-nazionale-bersaglieri",
+    "nome": "Associazione Nazionale Bersaglieri",
+    "sigla": "ANB",
+    "ambito": "Memoria e associazioni d'arma",
+    "descrizione": "",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Associazione-Nazionale-Bersaglieri/",
+    "contatti": {
+      "sede": "Via Bernocchi 10 - Castellanza - c/o Torrione",
+      "email": "",
+      "telefono": ""
+    }
+  },
+  {
+    "slug": "a-n-a-associazione-nazionale-alpini",
+    "nome": "A.N.A. Associazione Nazionale Alpini",
+    "sigla": "ANA",
+    "ambito": "Memoria e associazioni d'arma",
+    "descrizione": "",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/A.N.A.-Associazione-Nazionale-Alpini/",
+    "contatti": {
+      "sede": "Via Bernocchi 10 - Castellanza - c/o Torrione",
+      "email": "dario.crenna@gmail.com",
+      "telefono": "3342820875"
+    }
+  },
+  {
+    "slug": "the-house-of-sarah-and-abraham-casa-ibe",
+    "nome": "The House of Sarah and Abraham (Casa IBE)",
+    "sigla": "IBE",
+    "ambito": "Solidarietà e sociale",
+    "descrizione": "Promozione e diffusione della cultura e della pratica del volontariato; accoglienza umanitaria e integrazione sociale dei migranti.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/The-House-of-Sarah-and-Abraham-in-breve-CASA-IBE/",
+    "contatti": {
+      "sede": "Via G. Marconi 8 - Castellanza",
+      "email": "casaibecastellanza@gmail.com",
+      "telefono": "3899132113"
+    }
+  },
+  {
+    "slug": "universiter",
+    "nome": "Universiter",
+    "sigla": "U",
+    "ambito": "Cultura",
+    "descrizione": "Contribuire alla promozione culturale degli associati mediante conferenze e corsi su argomenti specifici, laboratori per la realizzazione di varie attività, gite turistico culturali.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Universiter/",
+    "contatti": {
+      "sede": "c/o Centro Civico - Piazza Soldini 8 - Castellanza",
+      "email": "info@universitercastellanza.it",
+      "telefono": "0331 505459"
+    }
+  },
+  {
+    "slug": "pro-loco",
+    "nome": "Pro Loco",
+    "sigla": "PL",
+    "ambito": "Tradizioni e rioni",
+    "descrizione": "Promuovere in ogni forma la conoscenza, la tutela e la valorizzazione delle realtà e delle potenzialità turistiche, naturalistiche, culturali, artistiche, storiche, sociali ed enogastronomiche del territorio.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Pro-Loco/",
+    "contatti": {
+      "sede": "Piazza Castegnate 6 - Castellanza",
+      "email": "presidente.prolococastellanza@yahoo.it",
+      "telefono": "3349742560"
+    }
+  },
+  {
+    "slug": "il-prisma",
+    "nome": "Il Prisma",
+    "sigla": "P",
+    "ambito": "Cultura",
+    "descrizione": "Organizzare e promuovere ogni tipo di attività associativa e culturale legata ai principi ispiratori dell'associazione.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Il-Prisma/",
+    "contatti": {
+      "sede": "Via Garibaldi 23 - Castellanza",
+      "email": "ilprisma@ilprisma.net",
+      "telefono": "0331 505565"
+    }
+  },
+  {
+    "slug": "gruppo-giovani-castellanzesi",
+    "nome": "Gruppo Giovani Castellanzesi",
+    "sigla": "GGC",
     "ambito": "Tempo libero",
-    "descrizione": "Punto di ritrovo per il tempo libero, con attività ricreative, gite e momenti di festa durante l'anno.",
-    "contatti": {"referente": "Nome del referente", "email": "info@esempio.it", "telefono": "0331 000000", "sito": "", "facebook": "", "instagram": ""}
+    "descrizione": "Organizzazione di incontri culturali, musicali, sportivi, feste a tema, mercatini tipici, sagre di paese, eventi e convegni.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Gruppo-Giovani-Castellanzesi/",
+    "contatti": {
+      "sede": "Via Borsano 1F - Castellanza",
+      "email": "staff@gruppogiovanicastellanzesi.com",
+      "telefono": "3516924232"
+    }
+  },
+  {
+    "slug": "gospel-for-joy",
+    "nome": "Gospel for joy",
+    "sigla": "GFJ",
+    "ambito": "Musica",
+    "descrizione": "Diffondere la cultura musicale e artistica, con particolare attenzione alla musica gospel e spiritual; essere luogo di incontro nel nome di interessi culturali per una crescita umana e civile.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Gospel-for-joy/",
+    "contatti": {
+      "sede": "Via S. Camillo 2 - Castellanza",
+      "email": "gospelforjoy@virgilio.it",
+      "telefono": "3397488625"
+    }
+  },
+  {
+    "slug": "corpo-musicale-santa-cecilia",
+    "nome": "Corpo Musicale Santa Cecilia",
+    "sigla": "CMS",
+    "ambito": "Musica",
+    "descrizione": "Offrire attraverso la propria attività musicale un contributo alla vita culturale della città, all'educazione dei giovani, ai momenti aggregativi della comunità.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Corpo-Musicale-Santa-Cecilia/",
+    "contatti": {
+      "sede": "Sede operativa: Piazza Soldini 8 - Castellanza",
+      "email": "santaceciliacast@libero.it",
+      "telefono": "3296375649"
+    }
+  },
+  {
+    "slug": "coro-donna-lombarda",
+    "nome": "Coro Donna Lombarda",
+    "sigla": "CDL",
+    "ambito": "Musica",
+    "descrizione": "La diffusione, la promozione e il recupero del dialetto e delle tradizioni mediante canti popolari, danze e quant'altro attinente al mondo dello spettacolo.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Coro-Donna-Lombarda-00002/",
+    "contatti": {
+      "sede": "c/o Teatro di via Dante - Via Dante 5 - Castellanza",
+      "email": "",
+      "telefono": "0331 505939"
+    }
+  },
+  {
+    "slug": "associazione-navimodellisti-valle-olona",
+    "nome": "Associazione Navimodellisti Valle Olona",
+    "sigla": "NVO",
+    "ambito": "Tempo libero",
+    "descrizione": "Promuovere gli incontri tra appassionati di modellismo navale; mettere a disposizione dei soci libri, riviste e disegni per la realizzazione dei modelli; promuovere e partecipare a manifestazioni e mostre di navimodellismo.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Associazione-Navimodellisti-Valle-Olona/",
+    "contatti": {
+      "sede": "c/o Torrione - Via Bernocchi 10 - Castellanza",
+      "email": "anvo19@outlook.it",
+      "telefono": "3293923356"
+    }
+  },
+  {
+    "slug": "compagnia-filodrammatica-entrata-di-sicurezza",
+    "nome": "Compagnia filodrammatica Entrata di Sicurezza",
+    "sigla": "CFE",
+    "ambito": "Cultura",
+    "descrizione": "Espansione della cultura in forma teatrale sul territorio.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/COMPAGNIA-FILODRAMMATICA-ENTRATA-DI-SICUREZZA/",
+    "contatti": {
+      "sede": "c/o Teatro di via Dante - Via Dante 5 - Castellanza",
+      "email": "sergio.farioli@gmail.com",
+      "telefono": "3362590328"
+    }
+  },
+  {
+    "slug": "associazione-culturale-area-giovani",
+    "nome": "Associazione Culturale Area Giovani",
+    "sigla": "AG",
+    "ambito": "Tempo libero",
+    "descrizione": "Proporre e promuovere attività culturali, sociali e ricreative con l'obiettivo dell'aggregazione e della partecipazione di ragazzi, giovani e cittadini interessati a vivere consapevolmente la realtà che li circonda.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Associazione-Culturale-Area-Giovani/",
+    "contatti": {
+      "sede": "Via Vittorio Veneto 8 - Castellanza",
+      "email": "areagiovanicastellanza@gmail.com",
+      "telefono": "3483413908"
+    }
+  },
+  {
+    "slug": "archivio-fotografico-italiano",
+    "nome": "Archivio Fotografico Italiano",
+    "sigla": "AFI",
+    "ambito": "Cultura",
+    "descrizione": "Promozione della cultura fotografica attraverso mostre ed eventi, e raccolta di immagini storiche e contemporanee per la creazione di una collezione di importanza nazionale.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Archivio-Fotografico-Italiano/",
+    "contatti": {
+      "sede": "c/o Villa Pomini - via don Testori 14 - Castellanza",
+      "email": "afi.fotoarchivio@gmail.com",
+      "telefono": "3475902640"
+    }
+  },
+  {
+    "slug": "anpi-associazione-nazionale-partigiani-italiani",
+    "nome": "ANPI - Associazione Nazionale Partigiani Italiani",
+    "sigla": "ANPI",
+    "ambito": "Memoria e associazioni d'arma",
+    "descrizione": "Promuovere la conoscenza e il rispetto della Costituzione; mantenere vivo il ricordo di coloro che combatterono per la libertà; rievocare e mantenere vive le feste istituzionali.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/ANPI-Associazione-Nazionale-Partigiani-Italiani/",
+    "contatti": {
+      "sede": "c/o Centro Civico Polivalente - Piazza Soldini 8 - Castellanza",
+      "email": "anpi_l.bellaria@libero.it",
+      "telefono": "3341259720"
+    }
+  },
+  {
+    "slug": "amici-del-bonsai",
+    "nome": "Amici del Bonsai",
+    "sigla": "AB",
+    "ambito": "Tempo libero",
+    "descrizione": "Diffondere la conoscenza dell'albero bonsai, approfondirne la tecnica di coltivazione tra i soci, favorire la diffusione e la valorizzazione del mondo del bonsai.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Amici-del-Bonsai/",
+    "contatti": {
+      "sede": "c/o Centro Civico Polivalente - Piazza Soldini 8 - Castellanza",
+      "email": "amici.bonsai@gmail.com",
+      "telefono": "3334357877"
+    }
+  },
+  {
+    "slug": "amici-del-parco-alto-milanese",
+    "nome": "Amici del Parco Alto Milanese",
+    "sigla": "APA",
+    "ambito": "Ambiente",
+    "descrizione": "Operare al fianco del Consorzio del Parco Alto Milanese per costruire un ponte tra il Consorzio, i cittadini e le associazioni, per la tutela, la promozione e la valorizzazione della natura e dell'ambiente.",
+    "scheda_comune": "https://www.comune.castellanza.va.it/vivere-il-comune/associazioni/dettaglio-associazione/Amici-del-Parco-Alto-Milanese/",
+    "contatti": {
+      "sede": "Sede legale: via O. Guerrini 40 - Busto Arsizio",
+      "email": "amicidelpam@gmail.com",
+      "telefono": "3358119969"
+    }
+  },
+  {
+    "slug": "associazione-di-esempio",
+    "nome": "Associazione di esempio",
+    "sigla": "ES",
+    "ambito": "Esempio",
+    "esempio": true,
+    "descrizione": "Scheda dimostrativa: mostra come appaiono le notizie e l'archivio quando un'associazione pubblica.",
+    "contatti": {
+      "sede": "Indirizzo dell'associazione",
+      "email": "info@esempio.it",
+      "telefono": "0331 000000"
+    }
   }
 ]

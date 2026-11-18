@@ -41,7 +41,7 @@ def carica():
         per[n["associazione"]].append(n)
     for lista in per.values():
         lista.sort(key=lambda n: n["data"], reverse=True)
-    ass.sort(key=lambda a: a["nome"].lower())
+    ass.sort(key=lambda a: (not a.get("esempio"), a["nome"].lower()))
     return imp, ass, per
 
 
@@ -72,7 +72,7 @@ def pagina(rel, titolo, descrizione, corpo, imp, briciole=None):
     bozza = ""
     if imp.get("prototipo"):
         bozza = ('<div class="avviso-prototipo" role="note"><strong>Prototipo per la valutazione interna.</strong> '
-                 'Le associazioni e le notizie presenti sono di esempio.</div>')
+                 "I dati delle associazioni vengono dal sito del Comune; le notizie dell'«Associazione di esempio» sono dimostrative.</div>")
     nav = ""
     if briciole:
         voci = "".join(
@@ -132,7 +132,8 @@ def pagina(rel, titolo, descrizione, corpo, imp, briciole=None):
 def avatar(a, rel, classe="avatar"):
     if a.get("logo"):
         return f'<span class="{classe} con-logo"><img src="{rel}{e(a["logo"])}" alt=""></span>'
-    return f'<span class="{classe}" aria-hidden="true">{e(a["sigla"])}</span>'
+    lunga = " lunga" if len(a["sigla"]) > 3 else ""
+    return f'<span class="{classe}{lunga}" aria-hidden="true">{e(a["sigla"])}</span>'
 
 
 def file_notizia(n):
@@ -171,11 +172,13 @@ def scheda_contatti(a):
     c = a.get("contatti", {})
     righe = []
     if c.get("referente"): righe.append(("Referente", e(c["referente"])))
+    if c.get("sede"): righe.append(("Sede", e(c["sede"])))
     if c.get("email"): righe.append(("Email", f'<a href="mailto:{e(c["email"])}">{e(c["email"])}</a>'))
     if c.get("telefono"): righe.append(("Telefono", e(c["telefono"])))
     if c.get("sito"): righe.append(("Sito", f'<a href="{e(c["sito"])}">{e(re.sub(r"^https?://", "", c["sito"]).rstrip("/"))}</a>'))
     social = [f'<a href="{e(c[s])}">{t}</a>' for s, t in (("facebook", "Facebook"), ("instagram", "Instagram")) if c.get(s)]
     if social: righe.append(("Social", " · ".join(social)))
+    if a.get("scheda_comune"): righe.append(("Sul sito del Comune", f'<a href="{e(a["scheda_comune"])}">Scheda dell\'associazione</a>'))
     if not righe:
         return ""
     return ('<aside class="contatti" aria-labelledby="t-contatti"><h2 id="t-contatti">Contatti</h2><dl>'
@@ -193,17 +196,18 @@ def home(imp, ass, per):
     blocchi = []
     for a in ass:
         ult = per[a["slug"]][0] if per[a["slug"]] else None
-        info = (f'Ultima notizia: <time datetime="{ult["data"]}">{data_it(ult["data"])}</time>' if ult else "Nessuna notizia pubblicata")
-        blocchi.append(f'''<li data-ambito="{e(a["ambito"])}"><a class="blocco" href="{a["slug"]}/index.html">
+        info = (f'<span class="ultima">Ultima notizia: <time datetime="{ult["data"]}">{data_it(ult["data"])}</time></span>' if ult else "")
+        blocchi.append(f'''<li data-ambito="{e(a["ambito"])}" data-nome="{e(a["nome"].lower())}"><a class="blocco" href="{a["slug"]}/index.html">
   {avatar(a, "")}
-  <span class="testo-blocco"><span class="ambito">{e(a["ambito"])}</span><span class="nome">{e(a["nome"])}</span><span class="ultima">{info}</span></span>
+  <span class="testo-blocco"><span class="ambito">{e(a["ambito"])}</span><span class="nome">{e(a["nome"])}</span>{info}</span>
 </a></li>''')
     corpo = f'''<section class="apertura"><div class="contenitore">
   <h1>Associazioni del territorio</h1>
-  <p class="introduzione">Le associazioni che animano la vita di Castellanza raccontano qui le loro attività, gli appuntamenti e le iniziative aperte ai cittadini. Scegli un'associazione per leggere le sue notizie.</p>
+  <p class="introduzione">Le associazioni che animano la vita di Castellanza raccontano qui le loro attività, gli appuntamenti e le iniziative aperte ai cittadini. Scegli un'associazione per conoscerla e leggere le sue notizie.</p>
 </div></section>
 <section class="elenco" aria-labelledby="t-elenco"><div class="contenitore">
   <h2 id="t-elenco" class="nascosto">Elenco delle associazioni</h2>
+  <div class="cerca" hidden><label for="cerca-ass">Cerca un'associazione</label><input id="cerca-ass" type="search" placeholder="Scrivi il nome" autocomplete="off"></div>
   {filtri}
   <p class="conteggio" aria-live="polite"></p>
   <ul class="blocchi">
@@ -217,16 +221,17 @@ def home(imp, ass, per):
 </div></section>
 <script>
 (function(){{
-  var box=document.querySelector('.filtri'); if(!box) return;
-  var bott=box.querySelectorAll('button'), voci=document.querySelectorAll('.blocchi li'), cont=document.querySelector('.conteggio');
-  box.hidden=false;
-  function mostra(amb){{
-    var n=0;
-    voci.forEach(function(li){{ var si=!amb||li.dataset.ambito===amb; li.hidden=!si; if(si) n++; }});
+  var box=document.querySelector('.filtri'), cerca=document.querySelector('.cerca'); if(!box) return;
+  var inp=document.getElementById('cerca-ass'), bott=box.querySelectorAll('button'), voci=document.querySelectorAll('.blocchi li'), cont=document.querySelector('.conteggio');
+  box.hidden=false; cerca.hidden=false; var amb='';
+  function mostra(){{
+    var q=inp.value.trim().toLowerCase(), n=0;
+    voci.forEach(function(li){{ var si=(!amb||li.dataset.ambito===amb)&&(!q||li.dataset.nome.indexOf(q)>-1); li.hidden=!si; if(si) n++; }});
     bott.forEach(function(b){{ b.setAttribute('aria-pressed', String(b.dataset.ambito===amb)); }});
-    cont.textContent = amb ? (n===1 ? '1 associazione' : n+' associazioni')+' in "'+amb+'"' : '';
+    cont.textContent = (amb||q) ? (n===0 ? 'Nessuna associazione trovata' : n===1 ? '1 associazione' : n+' associazioni') : '';
   }}
-  bott.forEach(function(b){{ b.addEventListener('click', function(){{ mostra(b.dataset.ambito); }}); }});
+  bott.forEach(function(b){{ b.addEventListener('click', function(){{ amb=b.dataset.ambito; mostra(); }}); }});
+  inp.addEventListener('input', mostra);
 }})();
 </script>'''
     return pagina("", "Associazioni del territorio | Città di Castellanza",
