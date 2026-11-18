@@ -20,7 +20,7 @@ MESI = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio",
         "agosto", "settembre", "ottobre", "novembre", "dicembre"]
 SITO = "https://associazioni.comune.castellanza.va.it/"
 COMUNE = "https://www.comune.castellanza.va.it/"
-NOME_SITO = "Il Giornale delle Associazioni"
+NOME_SITO = "Notizie dalle associazioni"
 
 e = html.escape
 
