@@ -1,0 +1,19 @@
+{
+  "associazione": "associazione-culturale-esempio",
+  "data": "2026-11-16",
+  "slug": "tre-incontri-con-gli-autori-a-dicembre",
+  "titolo": "Tre incontri con gli autori a dicembre",
+  "sommario": "Ogni giovedì sera, dal 3 al 17 dicembre, scrittori e studiosi presenteranno i loro libri dialogando con il pubblico.",
+  "testo": [
+    "L'Associazione culturale di esempio propone un piccolo ciclo di presentazioni per chiudere l'anno. Ogni serata sarà dedicata a un libro diverso, con spazio per le domande dei presenti.",
+    "L'ingresso è libero fino a esaurimento dei posti disponibili."
+  ],
+  "evento": {
+    "quando": "Giovedì 3, 10 e 17 dicembre 2026, alle 21",
+    "dove": "Da indicare"
+  },
+  "immagine": {
+    "file": "img/notizie/2026-11-16-tre-incontri-con-gli-autori-a-dicembre.jpg",
+    "alt": "Immagine di esempio"
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "associazione-sportiva-esempio",
+    "nome": "Associazione sportiva di esempio",
+    "sigla": "AS",
+    "ambito": "Sport",
+    "descrizione": "Promuove l'attività sportiva per ragazzi e adulti, con corsi durante tutto l'anno e iniziative aperte alle famiglie.",
+    "contatti": {"referente": "Nome del referente", "email": "info@esempio.it", "telefono": "0331 000000", "sito": "", "facebook": "", "instagram": ""}
+  },
+  {
+    "slug": "associazione-culturale-esempio",
+    "nome": "Associazione culturale di esempio",
+    "sigla": "AC",
+    "ambito": "Cultura",
+    "descrizione": "Organizza incontri con gli autori, mostre e serate dedicate alla storia e alla cultura del territorio.",
+    "contatti": {"referente": "Nome del referente", "email": "info@esempio.it", "telefono": "0331 000000", "sito": "", "facebook": "", "instagram": ""}
+  },
+  {
+    "slug": "associazione-volontariato-esempio",
+    "nome": "Associazione di volontariato di esempio",
+    "sigla": "AV",
+    "ambito": "Sociale e volontariato",
+    "descrizione": "Offre accompagnamento e piccoli servizi alle persone anziane e alle famiglie in difficoltà, grazie all'impegno dei volontari.",
+    "contatti": {"referente": "Nome del referente", "email": "info@esempio.it", "telefono": "0331 000000", "sito": "", "facebook": "", "instagram": ""}
+  },
+  {
+    "slug": "associazione-ambientale-esempio",
+    "nome": "Associazione ambientale di esempio",
+    "sigla": "AA",
+    "ambito": "Ambiente",
+    "descrizione": "Si occupa della cura del verde e della sensibilizzazione sui temi ambientali, con giornate di lavoro aperte ai cittadini.",
+    "contatti": {"referente": "Nome del referente", "email": "info@esempio.it", "telefono": "0331 000000", "sito": "", "facebook": "", "instagram": ""}
+  },
+  {
+    "slug": "associazione-musicale-esempio",
+    "nome": "Associazione musicale di esempio",
+    "sigla": "AM",
+    "ambito": "Musica",
+    "descrizione": "Riunisce musicisti di ogni età, tiene corsi di strumento e accompagna con i suoi concerti le ricorrenze della città.",
+    "contatti": {"referente": "Nome del referente", "email": "info@esempio.it", "telefono": "0331 000000", "sito": "", "facebook": "", "instagram": ""}
+  },
+  {
+    "slug": "circolo-ricreativo-esempio",
+    "nome": "Circolo ricreativo di esempio",
+    "sigla": "CR",
+    "ambito": "Tempo libero",
+    "descrizione": "Punto di ritrovo per il tempo libero, con attività ricreative, gite e momenti di festa durante l'anno.",
+    "contatti": {"referente": "Nome del referente", "email": "info@esempio.it", "telefono": "0331 000000", "sito": "", "facebook": "", "instagram": ""}
+  }
+]

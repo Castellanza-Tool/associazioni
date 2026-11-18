@@ -1,0 +1,15 @@
+{
+  "associazione": "associazione-sportiva-esempio",
+  "data": "2026-10-04",
+  "slug": "una-giornata-di-sport-per-le-famiglie",
+  "titolo": "Una giornata di sport per le famiglie",
+  "sommario": "Domenica 18 ottobre genitori e figli potranno provare insieme diverse discipline, con partecipazione libera e gratuita.",
+  "testo": [
+    "Torna l'appuntamento dedicato allo sport in famiglia. Per tutta la giornata gli istruttori dell'associazione proporranno prove e giochi adatti a ogni età.",
+    "Non serve prenotare: basta presentarsi con abbigliamento comodo e scarpe da ginnastica."
+  ],
+  "evento": {
+    "quando": "Domenica 18 ottobre 2026, dalle 10 alle 17",
+    "dove": "Da indicare"
+  }
+}

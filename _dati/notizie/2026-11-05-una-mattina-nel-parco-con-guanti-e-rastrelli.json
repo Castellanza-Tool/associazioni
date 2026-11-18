@@ -1,0 +1,19 @@
+{
+  "associazione": "associazione-ambientale-esempio",
+  "data": "2026-11-05",
+  "slug": "una-mattina-nel-parco-con-guanti-e-rastrelli",
+  "titolo": "Una mattina nel parco con guanti e rastrelli",
+  "sommario": "Sabato 21 novembre i cittadini sono invitati a raccogliere foglie e rifiuti insieme ai volontari; l'attrezzatura viene fornita sul posto.",
+  "testo": [
+    "L'iniziativa è aperta a tutti, anche alle famiglie con bambini. Il ritrovo è fissato alle 9 e il lavoro si concluderà entro mezzogiorno.",
+    "In caso di pioggia la giornata sarà rinviata al sabato successivo."
+  ],
+  "evento": {
+    "quando": "Sabato 21 novembre 2026, dalle 9 alle 12",
+    "dove": "Da indicare"
+  },
+  "immagine": {
+    "file": "img/notizie/2026-11-05-una-mattina-nel-parco-con-guanti-e-rastrelli.jpg",
+    "alt": "Immagine di esempio"
+  }
+}
